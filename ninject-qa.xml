@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module name="RecorderConfigurationModule">
+  <bind service="Qualtrak.Coach.DTO.Integration.Contracts.IApiFacade, Qualtrak.Coach.DTO.Integration"
+        to="QATestRecorder.ApiFacade, QATestRecorder" />
+</module>

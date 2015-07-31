@@ -1,0 +1,147 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
+_UpgradeReport_Files
+UpgradeLog.XML
+UpgradeLog.htm
+/_UpgradeReport_Files
+/UpgradeLog.XML
+/UpgradeLog.htm
+
+msg.md
+
+ServiceStack.OrmLite/
+Coach.Web/Logs/*.txt
+
+lint.db
+Generated_Code/
+TestResults/*
+Coach.Web/Logs/Log_Exception1.txt
+AspireDB/AspireDB.dbmdl
+*.vs10x
+*.lic
+Database/Update/*.bat
+*.gpState
+*.DotSettings
+Settings.StyleCop
+api-doc/tmp
+Coach.Web/API/docs/*
+*.tmp
+*.old
+Coach.Web/H.wav
+Coach.Web/test.mp3
+
+*.xap
+Coach.Web/media/*
+Logs/
+
+# SmartAssembly
+Maps/*.samap
+SmartAssembly/*.pdb
+SmartAssembly/*.dll
+SmartAssembly/*.xap
+SmartAssembly/*.exe
+
+# QCRPM
+
+qcrpm/psake/examples/
+qcrpm/psake/tabexpansion/
+qcrpm/web/node_modules/
+qcrpm/installer/integration-web/
+qcrpm/installer/rest-api-v2/
+qcrpm/installer/scheduler/
+qcrpm/installer/db/
+qcrpm/installer/utilities/
+qcrpm/installer/coach-web/
+
+# Instrumentation
+Instrumentation/coach-instrumentation-dashboard/node_modules/*
+
+
+# logs
+Coach/logs
+"Integration Web Services/RecorderApiService/logs"
+"Integration Web Services/RecorderDatabaseService/logs"
+Scheduler/Scheduler.Console/logs
+Scheduler/Scheduler.WindowsService/logs
+/.JustCode/Coach Full.solution-user.settings.xmlf
+/Coach Full.jmconfig
+
+# IDE
+Coach/.idea/*
+Coach/atlassian*
+/Qualtrak.Coach.zip
+/Qualtrak.Coach.SetParameters.xml
+/Qualtrak.Coach.SourceManifest.xml
+/Qualtrak.Coach.deploy-readme.txt
+/Qualtrak.Coach.deploy.cmd
+
+
+# attachments
+Coach/UploadedFiles/BookMarks/*
+/licensing/Licensing.API/data/status.json
+
+# VS 2015 folder
+.vs/*
+
+/Coach/translations/languages.js
+/Coach/translations/translations.js
+
+# NCrunch
+*.v2.ncrunchproject
+*.ncrunchproject
+/Recorders/Ekisa
