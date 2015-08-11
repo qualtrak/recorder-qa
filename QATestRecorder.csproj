@@ -42,9 +42,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Qualtrak.Coach.DTO.Integration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Qualtrak.Coach.Integration.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Lib\Qualtrak.Coach.DTO.Integration.dll</HintPath>
+      <HintPath>Lib\Qualtrak.Coach.Integration.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lib\Qualtrak.Coach.DTO.Integration.dll" />
+    <Content Include="Lib\Qualtrak.Coach.Integration.Core.dll" />
     <Content Include="ninject-qa.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,4 +1,8 @@
-﻿namespace QATestRecorder
+﻿using System.Threading.Tasks;
+using Qualtrak.Coach.Integration.Core.Contracts;
+using Qualtrak.Coach.Integration.Core.DTO;
+
+namespace QATestRecorder
 {
     using System;
     using System.Collections.Generic;
@@ -6,8 +10,6 @@
     using System.Net;
     using System.Net.Http;
     using System.Web.Configuration;
-    using Qualtrak.Coach.DTO.Integration;
-    using Qualtrak.Coach.DTO.Integration.Contracts;
 
     public class ApiFacade : IApiFacade
     {
@@ -19,6 +21,46 @@
             {
                 _defaultFile = WebConfigurationManager.AppSettings["coach:service:defaultmediafile"];
             }
+        }
+
+        public Task<List<RecorderUserInfo>> GetUsersAsync(string tenantCode, string username = null, string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<RecordingInfo>> GetRecordingsAsync(int limit, string tenantCode, string userId, List<SearchCriteria> searchCriteria, string username = null,
+            string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<RecordingUser>> GetRecordingsForUsersAsync(int limit, string tenantCode, List<string> userIds, List<SearchCriteria> searchCriteria, string username = null,
+            string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<RecordingInfo>> GetRecordingsForRecordingIdsAsync(List<string> recordingIds, string tenantCode, string username = null,
+            string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> GetRecordingUrlAsync(string recordingId, string recordingOriginalUrl, string username = null,
+            string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task PostEvaluationScoreAsync(string tenantCode, string evaluationId, string headlineScore, string extraScore,
+            string userId, string recordingId, string username = null, string password = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Stream> GetStreamAsync(string url)
+        {
+            throw new NotImplementedException();
         }
 
         public List<RecorderUserInfo> GetUsers(string tenantCode, string username, string password)
