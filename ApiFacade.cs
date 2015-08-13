@@ -14,7 +14,6 @@ namespace QATestRecorder
     public class ApiFacade : IApiFacade
     {
         private string _defaultFile = null;
-        private static List<RecordingUser> Recordings = new List<RecordingUser>();  
 
         public ApiFacade()
         {
@@ -57,7 +56,6 @@ namespace QATestRecorder
             {
                 RecordingInfo recoding = new RecordingInfo
                 {
-                    TenantCode = int.Parse(tenantCode),
                     RecorderUserID = userId,
                     RecordingID = i.ToString(),
                     RecordingDate = DateTime.Now.AddDays(-1),
@@ -84,7 +82,6 @@ namespace QATestRecorder
                 List<RecordingInfo> recordings = await this.GetRecordingsAsync(limit, tenantCode, userId, searchCriteria, username, password);
                 List<RecordingUser> recordingUsers = recordings.Select(x => new RecordingUser { RecordingId = x.RecordingID, RecorderUserId = x.RecorderUserID }).ToList();
                 result.AddRange(recordingUsers);
-                Recordings.AddRange(recordingUsers);
                 recordings.Clear();
                 recordingUsers.Clear();
             }
@@ -98,14 +95,10 @@ namespace QATestRecorder
             var list = new List<RecordingInfo>();
 
             foreach (var recordingId in recordingIds)
-            {
-                string userId = Recordings.Where(x => x.RecordingId == recordingId).Select(x => x.RecorderUserId).FirstOrDefault();
-
+            {              
                 var recoding = new RecordingInfo
                 {
-                    TenantCode = int.Parse(tenantCode),
                     RecordingID = recordingId,
-                    RecorderUserID = userId,
                     RecordingDate = DateTime.Now.AddDays(-1),
                     Metadata = "{ \"metadata\" : [{\"label\" : \"Claim No\", \"value\" : \"123456\", \"field\" : \"claim_no\", \"type\" : \"number\"},{\"label\" : \"Caller Id\", \"value\" : \"004401232312311\", \"field\" : \"caller_id\", \"type\" : \"number\" }, {\"label\" : \"Account No\", \"value\" : \"12121231314AB\", \"field\" : \"account_no\", \"type\" : \"string\" }, {\"label\" : \"A really long label description\", \"value\" : \"A really long piece of call metadata information 1234567890 1234567890\", \"field\" : \"notes\", \"type\" : \"string\" }] }",
                     RecordingFileName = _defaultFile ?? "a.wmv"
