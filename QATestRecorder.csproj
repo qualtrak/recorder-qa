@@ -42,9 +42,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Qualtrak.Coach.Integration.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Qualtrak.Coach.DataConnector.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Lib\Qualtrak.Coach.Integration.Core.dll</HintPath>
+      <HintPath>Lib\Qualtrak.Coach.DataConnector.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,11 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiFacade.cs" />
+    <Compile Include="RecorderApiFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lib\Qualtrak.Coach.Integration.Core.dll" />
+    <Content Include="Lib\Qualtrak.Coach.DataConnector.Core.dll" />
     <Content Include="ninject-qa.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

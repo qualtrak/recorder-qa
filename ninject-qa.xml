@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <module name="RecorderConfigurationModule">
-  <bind service="Qualtrak.Coach.Integration.Core.Contracts.IApiFacade, Qualtrak.Coach.Integration.Core"
-        to="QATestRecorder.ApiFacade, QATestRecorder" />
+  <bind service="Qualtrak.Coach.DataConnector.Core.Recorder.IRecorderApiFacade, Qualtrak.Coach.DataConnector.Core"
+        to="QATestRecorder.RecorderApiFacade, QATestRecorder" />
 </module>
