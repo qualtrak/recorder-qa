@@ -68,15 +68,30 @@ namespace QATestRecorder
         }
 
 
-
+        /// <summary>
+        /// For args.Limit see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#limit
+        /// For args.SearchCriteria see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#date-range
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="args">See http://data-connector-api.readthedocs.org/en/latest/before-you-start.html for guidance</param>
+        /// <param name="properties"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Media>> GetMediaForUserAsync(string userId, MediaForUserArgs args, DataConnectorProperties properties)
         {
+            /*
+             * Note for Integration Engineer:
+             * 
+             * It is crucial that you incorporate and honour the args.Limit property. Please let Coach dictate how many recordings it needs.
+             *  - see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#limit
+             * It is also crucial you implement a filter on a date range.  Without a date filter you will always return the same set of recordings
+             *  - see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#date-rang
+             */
+
             int recordingsProcessedSoFar = 0;
             var list = new List<Media>();
 
             PurgeOldRecordings();
-
-
+            
             for (var i = 0; i < 1000; i++)
             {
                 var media = new Media
@@ -98,10 +113,24 @@ namespace QATestRecorder
             return await Task.FromResult(list); ;
         }
 
-    
-
+        /// <summary>
+        /// For args.Limit see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#limit
+        /// For args.SearchCriteria see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#date-range
+        /// </summary>
+        /// <param name="args">See http://data-connector-api.readthedocs.org/en/latest/before-you-start.html for guidance</param>
+        /// <param name="properties"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<MediaUser>> GetMediaForUsersAsync(MediaForUsersArgs args, DataConnectorProperties properties)
         {
+            /*
+             * Note for Integration Engineer:
+             * 
+             * It is crucial that you incorporate and honour the args.Limit property. Please let Coach dictate how many recordings it needs.
+             *  - see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#limit
+             * It is also crucial you implement a filter on a date range.  Without a date filter you will always return the same set of recordings
+             *  - see http://data-connector-api.readthedocs.org/en/latest/before-you-start.html#date-rang
+             */
+
             var result = new List<MediaUser>();
             MediaForUserArgs userArgs = CreateMediaForUserArgs(args);
 
@@ -116,9 +145,7 @@ namespace QATestRecorder
 
             return result;
         }
-
-       
-
+        
         public async Task<IEnumerable<Media>> GetMediaByIdsAsync(IEnumerable<string> ids, DataConnectorProperties properties)
         {
             var list = new List<Media>();
